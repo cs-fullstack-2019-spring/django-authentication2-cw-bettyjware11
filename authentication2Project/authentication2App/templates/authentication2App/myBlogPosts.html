@@ -1,0 +1,24 @@
+{% extends 'authentication2App/index.html' %}
+
+{% block header %}
+My Blog Posts
+{% endblock header %}
+
+
+{% block content %}
+
+{% if blogPost_list %}
+
+{% for eachItem in blogPost_list %}
+
+<!--<h2>{{ eachItem.blogPost_username }}</h2>-->
+<p>{{ eachItem.blog_title }}</p>
+<p>{{ eachItem.blog_entry }}</p>
+<!--<p><a href="#"> Display Blog Posts? </a></p>-->
+<hr/>
+{% endfor %}
+
+{% else %}
+<p>No Blog Posts Available.</p>
+{% endif %}
+{% endblock content %}
